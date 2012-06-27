@@ -242,7 +242,7 @@ THREE.TrackballControls = function ( object, domElement ) {
 
 		_this.object.lookAt( _this.target );
 
-		if ( lastPosition.distanceTo( _this.object.position ) > 0 ) {
+		if ( lastPosition.distanceToSquared( _this.object.position ) > 0 ) {
 			
 			_this.dispatchEvent( changeEvent );
 
